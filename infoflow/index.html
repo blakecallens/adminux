@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html ng-app="infoflow.app">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Info Flow Example</title>
+
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="../bower_components/fontawesome/css/font-awesome.min.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/main.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body ng-controller="MainController">
+    <nav class="navbar navbar-inverse navbar-fixed-top side-nav">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand visible-xs" href="#">mybrand</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li ng-class="{'active': currentView === 'users'}"><a href="#users" title="Users">
+              <i class="fa fa-2x fa-user hidden-xs"></i>
+              <span class="visible-xs">&nbsp;Users</span>
+            </a></li>
+            <li ng-class="{'active': currentView === 'social'}"><a href="#social" title="Social">
+              <i class="fa fa-2x fa-comment hidden-xs"></i>
+              <span class="visible-xs">&nbsp;Social</span>
+            </a></li>
+            <li ng-class="{'active': currentView === 'email'}"><a href="#email" title="Email">
+              <i class="fa fa-2x fa-envelope hidden-xs"></i>
+              <span class="visible-xs">&nbsp;Email</span>
+            </a></li>
+            <li ng-class="{'active': currentView === 'settings'}"><a href="#settings" title="Settings">
+              <i class="fa fa-2x fa-cog hidden-xs"></i>
+              <span class="visible-xs">&nbsp;Settings</span>
+            </a></li>
+            <li><a href="#" title="Log Out">
+              <i class="fa fa-2x fa-power-off hidden-xs"></i>
+              <span class="visible-xs">&nbsp;Log Out</span>
+            </a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="main-view" ng-view></div>
+
+    <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="../bower_components/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="../bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+
+    <script type="text/javascript" src="js/controllers/main.js"></script>
+    <script type="text/javascript" src="js/controllers/users.js"></script>
+    <script type="text/javascript" src="js/controllers/social.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
+</html>

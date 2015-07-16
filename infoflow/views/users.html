@@ -1,0 +1,61 @@
+<div class="container-fluid view-container">
+  <div class="row-fluid">
+    <div class="col-sm-3">
+      <div class="well hidden-xs">
+        <ul class="nav nav-pills nav-stacked">
+          <li ng-class="{'active': selectedItem === '1'}"><a ng-click="setSelectedItem(1)">
+            Item 1
+          </a></li>
+          <li ng-class="{'active': selectedItem === '2'}"><a ng-click="setSelectedItem(2)">
+            Item 2
+          </a></li>
+          <li ng-class="{'active': selectedItem === '3'}"><a ng-click="setSelectedItem(3)">
+            Item 3
+          </a></li>
+          <li ng-class="{'active': selectedItem === '4'}"><a ng-click="setSelectedItem(4)">
+            Item 4
+          </a></li>
+          <li ng-class="{'active': selectedItem === '5'}"><a ng-click="setSelectedItem(5)">
+            Item 5
+          </a></li>
+        </ul>
+      </div>
+      <div class="form-group visible-xs">
+        <select class="form-control" ng-model="selectedItem">
+          <option value="1">Item 1</option>
+          <option value="2">Item 2</option>
+          <option value="3">Item 3</option>
+          <option value="4">Item 4</option>
+          <option value="5">Item 5</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-sm-9 info-display">
+      <div class="info-item" ng-if="selectedItem === '1'">
+        <h3>Item 1</h3>
+        <p>Scenester actually Kickstarter Tumblr PBR retro. Readymade artisan roof party church-key. Chia DIY food truck, ugh jean shorts ethical semiotics seitan heirloom Kickstarter. Raw denim typewriter sustainable, hoodie fingerstache +1 health goth. Fingerstache XOXO skateboard you probably haven't heard of them. Whatever Wes Anderson YOLO ethical Pitchfork banjo, ennui American Apparel mustache. Helvetica Portland hella tattooed, four loko chia tilde iPhone sustainable listicle messenger bag Intelligentsia aesthetic tousled.</p>
+        <p>Twee brunch Vice, meh fap raw denim whatever. Meh Austin fixie sustainable, fap stumptown post-ironic Portland wolf Tumblr 90's try-hard. Godard artisan Austin, cliche hashtag plaid meggings organic mlkshk. Aesthetic Pitchfork heirloom photo booth, Tumblr Blue Bottle swag Portland sriracha Echo Park squid Intelligentsia meggings. PBR cray Shoreditch, four dollar toast normcore lumbersexual taxidermy. 90's McSweeney's slow-carb, mlkshk asymmetrical Portland church-key. DIY irony meditation sartorial fap, keytar XOXO Thundercats heirloom salvia McSweeney's PBR.</p>
+      </div>
+      <div class="info-item" ng-if="selectedItem === '2'">
+        <h3>Item 2</h3>
+        <p>Street art plaid +1 post-ironic lo-fi, Kickstarter you probably haven't heard of them single-origin coffee Banksy Odd Future viral synth bespoke wolf 8-bit. Umami Pitchfork swag mixtape. Farm-to-table sriracha Vice you probably haven't heard of them. Truffaut health goth photo booth, sustainable next level tattooed twee Intelligentsia. Etsy sustainable PBR Portland beard. Artisan 90's dreamcatcher direct trade, raw denim Vice cray heirloom +1 kogi organic synth. Organic ennui meggings taxidermy.</p>
+        <p>Tumblr gluten-free photo booth, street art migas butcher forage deep v disrupt pour-over salvia tilde Blue Bottle cliche. Bushwick skateboard synth, drinking vinegar slow-carb meditation disrupt yr next level. Farm-to-table seitan next level iPhone. PBR twee cold-pressed 8-bit tofu. Vegan bitters XOXO, Banksy slow-carb wolf ethical Kickstarter Echo Park beard kitsch direct trade Odd Future aesthetic selvage. Letterpress Godard cornhole, scenester synth +1 freegan taxidermy Banksy Pitchfork bitters. Portland cornhole put a bird on it drinking vinegar 8-bit, art party YOLO selvage fixie small batch brunch.</p>
+      </div>
+      <div class="info-item" ng-if="selectedItem === '3'">
+        <h3>Item 3</h3>
+        <p>Ad tilde dolore banjo, vegan reprehenderit organic plaid iPhone lomo Vice 3 wolf moon meggings et. Kale chips disrupt Austin ethical. Banh mi fap exercitation food truck, fashion axe McSweeney's direct trade culpa sint anim kitsch hella. Tote bag odio do, anim direct trade asymmetrical +1 organic culpa magna aute tofu XOXO hella. Williamsburg kitsch pork belly butcher aute, Schlitz Shoreditch mlkshk squid deserunt in meggings. Dolor art party slow-carb 90's. Readymade Carles Helvetica asymmetrical heirloom non kitsch.</p>
+        <p>Lo-fi messenger bag asymmetrical flannel, drinking vinegar fashion axe Schlitz et letterpress Carles occupy synth biodiesel ea nulla. Tousled esse 3 wolf moon iPhone, deserunt deep v Neutra bitters. Officia sed gentrify, est lomo Godard health goth kogi Vice. Cred +1 irony, fap migas sustainable sartorial skateboard occupy mollit twee paleo cillum. Fanny pack retro deep v letterpress Helvetica, hella Wes Anderson fap biodiesel nisi pop-up velit meditation XOXO pour-over. Do cold-pressed id, disrupt sint sunt flexitarian pug gastropub consectetur consequat fanny pack food truck Pinterest asymmetrical. Shoreditch American Apparel kitsch, meh chia velit tempor food truck assumenda irure drinking vinegar typewriter Banksy vegan.</p>
+      </div>
+      <div class="info-item" ng-if="selectedItem === '4'">
+        <h3>Item 4</h3>
+        <p>Vegan Austin tempor listicle, XOXO keffiyeh fashion axe organic cliche artisan narwhal odio beard. Sed assumenda lomo, Pinterest blog placeat direct trade. Scenester fashion axe skateboard meggings sunt consequat officia, consectetur semiotics est stumptown laborum ad. Leggings master cleanse kitsch 3 wolf moon. Veniam Marfa wayfarers paleo. Art party VHS sunt anim. PBR authentic seitan meh, Carles four dollar toast eiusmod Kickstarter.</p>
+        <p>Organic church-key Neutra, tilde small batch synth Banksy butcher leggings fashion axe Etsy Pinterest vero Godard. Keffiyeh polaroid church-key quis hella, raw denim migas pariatur tofu. Cornhole gentrify put a bird on it non shabby chic, flexitarian Thundercats. Cronut nostrud kale chips, beard crucifix 3 wolf moon vegan placeat aliquip in art party sint vero post-ironic. Kitsch adipisicing anim, Austin tattooed aliquip cray mixtape kale chips next level Wes Anderson proident pork belly crucifix. Whatever tattooed adipisicing swag qui Neutra, ugh do commodo id seitan nesciunt elit laborum. Sriracha magna 8-bit, American Apparel do cliche pug blog meh Helvetica.</p>
+      </div>
+      <div class="info-item" ng-if="selectedItem === '5'">
+        <h3>Item 5</h3>
+        <p>Consequat +1 hoodie, officia slow-carb scenester pop-up VHS readymade. Pour-over Shoreditch keytar Etsy, tattooed post-ironic seitan officia McSweeney's. Authentic eiusmod plaid locavore, aliqua 90's anim magna migas nihil brunch. Gastropub authentic gluten-free, Helvetica 8-bit voluptate sed ut delectus quis keytar hoodie actually tempor. Deep v cillum iPhone direct trade. Laborum four loko tofu, beard pop-up selfies irure. Mlkshk minim umami, 8-bit tousled food truck slow-carb kitsch raw denim bespoke sustainable quis aliqua seitan.</p>
+        <p>Deserunt et duis leggings. Enim aliquip culpa tilde, Etsy literally mixtape beard. DIY Etsy actually, meditation tattooed adipisicing wolf hoodie gluten-free banh mi. Eiusmod ullamco raw denim, art party seitan cred put a bird on it YOLO Williamsburg drinking vinegar cronut selfies velit hoodie. Pop-up Thundercats sint, tote bag kitsch minim freegan deserunt Intelligentsia. Farm-to-table Blue Bottle letterpress lo-fi High Life. Heirloom enim narwhal church-key, selvage messenger bag letterpress locavore VHS Marfa skateboard Pitchfork ex.</p>
+      </div>
+    </div>
+  </div>
+</div>

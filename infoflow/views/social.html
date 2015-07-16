@@ -1,0 +1,48 @@
+<div class="container-fluid view-container">
+  <div class="row-fluid" ng-if="!posts">
+    <div class="info-item">
+      <i class="fa fa-5x fa-spinner fa-pulse"></i>
+    </div>
+  </div>
+  <div class="row-fluid" ng-if="posts">
+    <div class="col-sm-3">
+      <div class="well hidden-xs">
+        <ul class="nav nav-pills nav-stacked">
+          <li ng-class="{'active': post.data.permalink === selectedPost}" ng-repeat="post in posts">
+            <a ng-click="setSelectedPost(post.data.permalink)" ng-bind="post.data.title"></a>
+          </li>
+        </ul>
+      </div>
+      <div class="form-group visible-xs">
+        <select class="form-control" ng-model="selectedPost" ng-options="post.data.permalink as post.data.title for post in posts"></select>
+      </div>
+    </div>
+    <div class="col-sm-9 info-display" ng-class="{'col-sm-9': !showingMoreInfo, 'col-sm-7': showingMoreInfo}">
+      <div class="info-item">
+        <div ng-bind-html="getInfoHtml()"></div>
+        <div class="form-group text-right" ng-if="!showingMoreInfo">
+          <button type="button" class="btn btn-info" ng-click="toggleShowingMoreInfo()">
+            More Info
+            &nbsp;<i class="fa fa-angle-double-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2" ng-if="showingMoreInfo">
+      <div class="well well-info">
+        <div class="form-group">
+          <button type="button" class="close" ng-click="toggleShowingMoreInfo()">
+            <span aria-hidden="true">
+              <i class="fa fa-times"></i>
+            </span>
+          </button>
+        </div>
+        <p><strong>Posted:</strong> <span ng-bind="selectedPostObject.data.created_utc * 1000 | date: 'MMM d, yyyy HH:mm'"></span></p>
+        <p><strong>Author:</strong> <span ng-bind="selectedPostObject.data.author"></span></p>
+        <div class="form-group">
+          <a class="btn btn-default" ng-href="{{selectedPostObject.data.url}}" target="_blank">View on reddit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
