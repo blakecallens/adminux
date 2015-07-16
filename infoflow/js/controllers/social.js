@@ -68,7 +68,7 @@
           }
         }
 
-        $scope.selectedPost = $location.search().post || '0';
+        $scope.selectedPost = $location.search().post || $scope.posts[0].data.permalink;
       })
       .error(function(result) {
 
